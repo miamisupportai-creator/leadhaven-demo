@@ -811,6 +811,25 @@
       .section-title { color: #000 !important; font-size: 20px; }
       .terms-block, .terms-parties { border-color: #ccc; background: #fff; }
     }
+
+    /* ─── PRIVACY SECTION ─── */
+    #privacidad { padding: 100px 0; background: #080808; }
+    .privacy-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin: 48px 0; }
+    .privacy-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(0,212,255,0.12); border-radius: 16px; padding: 32px; transition: border-color 0.3s; }
+    .privacy-card:hover { border-color: rgba(0,212,255,0.35); }
+    .privacy-icon { width: 40px; height: 40px; margin-bottom: 16px; }
+    .privacy-card h3 { font-size: 1.1rem; font-weight: 600; color: #fff; margin-bottom: 10px; }
+    .privacy-card p { font-size: 0.9rem; color: #94a3b8; line-height: 1.6; }
+    .partners-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 40px; }
+    .partner-card { background: rgba(0,0,0,0.4); border: 1px solid rgba(0,212,255,0.1); border-radius: 12px; padding: 24px; text-align: center; }
+    .partner-name { font-size: 1.1rem; font-weight: 700; color: var(--cyan); margin-bottom: 6px; }
+    .partner-cert { font-size: 0.75rem; color: #64748b; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 12px; }
+    .partner-desc { font-size: 0.85rem; color: #94a3b8; line-height: 1.5; }
+    .privacy-note { margin-top: 40px; padding: 20px 24px; background: rgba(0,212,255,0.04); border-left: 3px solid var(--cyan); border-radius: 0 8px 8px 0; font-size: 0.85rem; color: #64748b; line-height: 1.6; }
+    @media (max-width: 640px) {
+      .privacy-grid { grid-template-columns: 1fr; }
+      .partners-grid { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
@@ -1248,6 +1267,102 @@
   </div>
 </section>
 
+<!-- ─── PRIVACIDAD Y PROTECCIÓN DE DATOS ─── -->
+<section id="privacidad">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">Privacidad y Seguridad</div>
+      <h2 class="section-title">Privacidad y Protección de Datos</h2>
+      <p class="section-desc">Tu información y la de tus clientes, protegida en todo momento.</p>
+
+      <p style="margin-top:24px; font-size:0.95rem; color:#94a3b8; line-height:1.7;">
+        AI50M LLC opera bajo estrictos estándares de privacidad de datos, alineados con las mejores prácticas de la industria de automatización en Estados Unidos. Todos los sistemas que construimos para LeadHaven incluyen las siguientes garantías:
+      </p>
+
+      <div class="privacy-grid">
+
+        <!-- Card 1: Least Privilege -->
+        <div class="privacy-card">
+          <svg class="privacy-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="10" y="18" width="20" height="14" rx="3" stroke="#00d4ff" stroke-width="1.5"/>
+            <path d="M14 18v-5a6 6 0 0 1 12 0v5" stroke="#00d4ff" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M17 26l2 2 4-4" stroke="#00d4ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <h3>Acceso mínimo necesario (Principle of Least Privilege)</h3>
+          <p>Solo accedemos a los datos estrictamente necesarios para construir y operar tu sistema. No almacenamos listas de leads, datos financieros ni información de tus clientes en servidores de AI50M.</p>
+        </div>
+
+        <!-- Card 2: Encryption -->
+        <div class="privacy-card">
+          <svg class="privacy-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 4L8 9v10c0 7.18 5.14 13.89 12 15.5C27.86 32.89 33 26.18 33 19V9L20 4z" stroke="#00d4ff" stroke-width="1.5" stroke-linejoin="round"/>
+            <path d="M14 20h2M18 17h2M22 20h2M14 23h4M22 23h2" stroke="#00d4ff" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+          <h3>Datos en tránsito y en reposo encriptados</h3>
+          <p>Todas las comunicaciones entre sistemas usan TLS 1.2+ (HTTPS). Los datos en reposo en los workflows de n8n y las integraciones de Twilio están encriptados end-to-end según los estándares de cada proveedor.</p>
+        </div>
+
+        <!-- Card 3: NDA -->
+        <div class="privacy-card">
+          <svg class="privacy-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="9" y="5" width="22" height="30" rx="3" stroke="#00d4ff" stroke-width="1.5"/>
+            <path d="M14 13h12M14 18h12M14 23h8" stroke="#00d4ff" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M22 28l2-1 4 3-1 2-4-3z" stroke="#00d4ff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <h3>Acuerdo de Confidencialidad (NDA) incluido</h3>
+          <p>El contrato incluye un NDA mutuo que protege tu información de negocio, metodologías operativas y datos de clientes. Vigente durante la relación comercial y por 2 años posteriores.</p>
+        </div>
+
+        <!-- Card 4: Data Deletion -->
+        <div class="privacy-card">
+          <svg class="privacy-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13 14h14l-1.5 16H14.5L13 14z" stroke="#00d4ff" stroke-width="1.5" stroke-linejoin="round"/>
+            <path d="M10 14h20M16 14v-3h8v3" stroke="#00d4ff" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M20 8c4.42 0 8 2.69 8 6" stroke="#00d4ff" stroke-width="1.2" stroke-linecap="round"/>
+            <path d="M26 12l2-2 2 2" stroke="#00d4ff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <h3>Derecho a eliminación de datos</h3>
+          <p>Al terminar la relación comercial, AI50M elimina cualquier dato, credencial o información de acceso de tu sistema de sus registros dentro de los 30 días siguientes a la terminación.</p>
+        </div>
+
+      </div>
+
+      <!-- Technology Partners -->
+      <div style="margin-top:60px;">
+        <p style="font-size:0.8rem; text-transform:uppercase; letter-spacing:2px; color:#64748b; font-weight:600; margin-bottom:8px;">Technology Partners</p>
+        <h3 style="font-size:1.3rem; font-weight:700; color:#fff; margin-bottom:4px;">Nuestros socios tecnológicos cumplen los más altos estándares de seguridad</h3>
+        <div class="partners-grid">
+
+          <div class="partner-card">
+            <div class="partner-name">Anthropic</div>
+            <div class="partner-cert">AI Provider (Claude)</div>
+            <p class="partner-desc">SOC 2 Type II certified. Datos procesados bajo política de privacidad empresarial de Anthropic. No se usan para entrenar modelos.</p>
+          </div>
+
+          <div class="partner-card">
+            <div class="partner-name">Twilio</div>
+            <div class="partner-cert">Communications API</div>
+            <p class="partner-desc">SOC 2 Type II, ISO 27001 certified. Líder global en comunicaciones seguras para empresas. TCPA compliant para SMS en USA.</p>
+          </div>
+
+          <div class="partner-card">
+            <div class="partner-name">n8n</div>
+            <div class="partner-cert">Automation Platform</div>
+            <p class="partner-desc">Self-hosted deployment disponible. Datos del workflow en tu propio servidor o en infraestructura EU/US de n8n con encriptación en reposo.</p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Legal note -->
+      <div class="privacy-note">
+        AI50M LLC no vende, comparte ni monetiza datos de clientes. Para consultas sobre privacidad: <strong style="color:#94a3b8;">rey@ai50m.com</strong> | Este sistema es desarrollado en Miami Beach, FL, USA y opera bajo jurisdicción del estado de Florida.
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- ─── PRÓXIMOS PASOS ─── -->
 <section id="cta">
   <div class="container" style="text-align:center">
@@ -1267,7 +1382,7 @@
       <div class="step-card">
         <div class="step-number">02</div>
         <h3>Envía el depósito</h3>
-        <p>Recibes un <strong style="color:var(--cyan)">Stripe invoice</strong> de AI50M LLC — pagas con tarjeta o ACH en 2 clicks. Si prefieres Zelle: rey@ai50m.com.</p>
+        <p>$2,250 vía <strong style="color:var(--cyan)">Stripe invoice</strong> (link enviado al confirmar) — pagas con tarjeta o ACH en 2 clicks. Si prefieres Zelle: <strong style="color:var(--cyan)">(786) 969-3419</strong>.</p>
       </div>
 
       <div class="step-card">
