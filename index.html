@@ -830,6 +830,81 @@
       .privacy-grid { grid-template-columns: 1fr; }
       .partners-grid { grid-template-columns: 1fr; }
     }
+
+    /* ─── DIAGNÓSTICO METRICS ─── */
+    .metric-big-value {
+      font-size: clamp(44px, 6vw, 72px);
+      font-weight: 800;
+      color: var(--cyan);
+      letter-spacing: -2px;
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+    .metric-big-label {
+      font-size: 14px;
+      color: rgba(255,255,255,0.85);
+      font-weight: 600;
+      line-height: 1.4;
+      margin-bottom: 6px;
+    }
+    .metric-big-sub {
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+    .metrics-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 40px;
+    }
+    .closing-bullet {
+      margin-top: 32px;
+      padding: 20px 24px;
+      background: rgba(0,212,255,0.04);
+      border-left: 3px solid var(--cyan);
+      border-radius: 0 8px 8px 0;
+      font-size: 15px;
+      color: rgba(255,255,255,0.9);
+      line-height: 1.7;
+      font-weight: 500;
+    }
+
+    /* ─── BENEFICIOS ─── */
+    .beneficios-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-top: 40px;
+    }
+    .beneficio-card-value {
+      font-size: clamp(32px, 4vw, 48px);
+      font-weight: 800;
+      color: var(--cyan);
+      letter-spacing: -1.5px;
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+    .beneficio-card-title {
+      font-size: 17px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+    .beneficio-card-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+    .beneficios-cta {
+      margin-top: 48px;
+      text-align: center;
+    }
+
+    @media (max-width: 640px) {
+      .metrics-grid-3 { grid-template-columns: 1fr; }
+      .beneficios-grid { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
@@ -891,24 +966,79 @@
 <section id="resumen">
   <div class="container">
     <div class="reveal">
-      <div class="section-label">Resumen Ejecutivo</div>
-      <h2 class="section-title">Lo que vamos a<br>construir juntos</h2>
-      <p class="section-desc">LeadHaven necesita un sistema que valide leads automáticamente, caliente prospectos antes de cada llamada y mantenga una presencia digital activa. Eso es exactamente lo que AI50M entrega — en producción en 14 días.</p>
+      <div class="section-label">Diagnóstico de Operación</div>
+      <h2 class="section-title">Tu operación tiene<br>una hemorragia silenciosa</h2>
+      <p class="section-desc">En el mercado MCA actual, el costo de adquisición de un lead full-submission oscila entre $4.60 y $5.00, y un live transfer llega hasta $150. Cada lead que tu equipo no logra contactar — o que califica mal — no es solo tiempo perdido. Es capital quemado y deals que la competencia está cerrando hoy mismo.</p>
     </div>
 
-    <div class="glass-card reveal" style="margin-top:40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:32px">
-      <div>
-        <div style="font-size:11px;font-weight:700;color:var(--cyan);text-transform:uppercase;letter-spacing:2px;margin-bottom:8px">Stack</div>
-        <div style="font-size:14px;color:rgba(255,255,255,0.8);line-height:1.7">n8n + Twilio + Claude AI + API de validación MCA</div>
+    <div class="metrics-grid-3 reveal">
+      <div class="glass-card">
+        <div class="metric-big-value">$3,600</div>
+        <div class="metric-big-label">Gross profit promedio por deal MCA cerrado</div>
+        <div class="metric-big-sub">Benchmark de la industria USA. Cada deal no cerrado es $3,600 que se queda en la mesa.</div>
       </div>
-      <div>
-        <div style="font-size:11px;font-weight:700;color:var(--cyan);text-transform:uppercase;letter-spacing:2px;margin-bottom:8px">Entrega</div>
-        <div style="font-size:14px;color:rgba(255,255,255,0.8);line-height:1.7">Sistema en producción en 14 días hábiles</div>
+      <div class="glass-card">
+        <div class="metric-big-value">30–50%</div>
+        <div class="metric-big-label">Leads con datos inválidos en listas estándar</div>
+        <div class="metric-big-sub">Números desconectados, duplicados y fuera de perfil. Tu equipo marca y quema horas sin saberlo.</div>
       </div>
-      <div>
-        <div style="font-size:11px;font-weight:700;color:var(--cyan);text-transform:uppercase;letter-spacing:2px;margin-bottom:8px">Soporte</div>
-        <div style="font-size:14px;color:rgba(255,255,255,0.8);line-height:1.7">30 días post-entrega incluidos + retainer disponible</div>
+      <div class="glass-card">
+        <div class="metric-big-value">70%</div>
+        <div class="metric-big-label">Leads que cuelgan cold calls en los primeros 10 segundos</div>
+        <div class="metric-big-sub">Sin warm-up previo, el prospecto no distingue tu llamada de un robocall. Resultado: click.</div>
       </div>
+    </div>
+
+    <div class="closing-bullet reveal">
+      La pregunta no es si necesitas un sistema. Es cuántos deals más puedes darte el lujo de perder antes de tenerlo.
+    </div>
+  </div>
+</section>
+
+<!-- ─── BENEFICIOS REALES ─── -->
+<section id="beneficios">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">Beneficios Medibles</div>
+      <h2 class="section-title">No prometemos transformación.<br>Prometemos estos números.</h2>
+      <p class="section-desc">Basados en benchmarks reales de agencias que implementan sistemas similares para brokers MCA en USA.</p>
+    </div>
+
+    <div class="beneficios-grid reveal">
+      <div class="glass-card">
+        <div class="beneficio-card-value">+35–40%</div>
+        <div class="beneficio-card-title">Pickup rate</div>
+        <div class="beneficio-card-desc">El warm-up por SMS antes de cada llamada convierte el cold call en conversación esperada. Es la diferencia entre un gatekeeper y un prospecto listo.</div>
+      </div>
+      <div class="glass-card">
+        <div class="beneficio-card-value">0 segundos</div>
+        <div class="beneficio-card-title">Desperdiciados en números muertos</div>
+        <div class="beneficio-card-desc">Twilio Lookup API valida cada número antes de marcar. Tu equipo solo habla con líneas activas — nunca con un "number disconnected".</div>
+      </div>
+      <div class="glass-card">
+        <div class="beneficio-card-value">24/7</div>
+        <div class="beneficio-card-title">Sin intervención manual</div>
+        <div class="beneficio-card-desc">El sistema califica, valida, notifica y agenda sin que nadie del equipo lo toque. El lead entra a las 3 AM y el warm-up se envía solo.</div>
+      </div>
+      <div class="glass-card">
+        <div class="beneficio-card-value">+2–3 deals/mes</div>
+        <div class="beneficio-card-title">Adicionales al pipeline</div>
+        <div class="beneficio-card-desc">Basado en el aumento típico de contactabilidad del 20–30% en operaciones MCA comparables. A $3,600 de profit promedio: $86K–$130K anuales adicionales.</div>
+      </div>
+      <div class="glass-card">
+        <div class="beneficio-card-value">100%</div>
+        <div class="beneficio-card-title">Trazabilidad en tiempo real</div>
+        <div class="beneficio-card-desc">Dashboard con métricas vivas: leads procesados, tasa de validez, pickup rate, conversión por fuente. Sabes exactamente dónde está tu pipeline sin perseguir reports.</div>
+      </div>
+      <div class="glass-card">
+        <div class="beneficio-card-value">&lt;14 días</div>
+        <div class="beneficio-card-title">A producción</div>
+        <div class="beneficio-card-desc">Mientras otras agencias cotizan proyectos de 6–12 semanas, nosotros entregamos en 2. Sin onboarding eterno, sin discovery calls interminables.</div>
+      </div>
+    </div>
+
+    <div class="beneficios-cta reveal">
+      <a href="#timeline" class="btn-outline">Ver cómo lo implementamos &rarr;</a>
     </div>
   </div>
 </section>
